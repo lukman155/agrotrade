@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { TabsTrigger, TabsList, TabsContent, Tabs } from "@/components/ui/tabs"
 import { auth } from '../firebaseConfig'
 import { useRouter } from 'next/navigation'
-import { Leaf, Bitcoin, Lock, Mail, Loader2 } from 'lucide-react'
+import { Lock, Mail, Loader2 } from 'lucide-react'
 
 export default function AuthPage() {
   const [email, setEmail] = useState('')
@@ -53,22 +53,19 @@ export default function AuthPage() {
     <section className="min-h-screen flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('./images/auth.jpg')"}}>
       <div className="w-full max-w-md px-4">
         <div className="flex justify-center mb-8">
-          <Leaf className="h-12 w-12 text-black-600 mr-2" />
-          <Bitcoin className="h-12 w-12 text-blue-600" />
         </div>
-        <Card className="w-full backdrop-blur-sm bg-white/30 border-green-100">
+        <Card className="w-full backdrop-blur-sm bg-white/30 border-grey-100">
           <CardHeader className="text-center">
             <CardTitle className="text-3xl font-bold text-green-800">AgroTrade</CardTitle>
-            <CardDescription className="text-green-600">
+            <CardDescription className="text-slate-600">
               Trading grains for the best gains
             </CardDescription>
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="login">
               <TabsList className="grid w-full grid-cols-2 mb-8">
-                <TabsTrigger value="login" className="text-green-700 data-[state=active]:bg-green-200">Login</TabsTrigger>
-                <TabsTrigger value="register" className="text-green-700 data-[state=active]:bg-blue-200">Register</TabsTrigger>
-              </TabsList>
+               <TabsTrigger value="login" className="data-[state=active]:bg-green-100 data-[state=active]:text-green-800">Login</TabsTrigger>
+                <TabsTrigger value="register" className="data-[state=active]:bg-blue-100 data-[state=active]:text-blue-800">Register</TabsTrigger></TabsList>
               <TabsContent value="login">
                 <form onSubmit={handleLogin} className="space-y-6">
                   <div className="space-y-2">
