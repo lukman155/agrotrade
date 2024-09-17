@@ -48,15 +48,15 @@ export default function TradeDetailsModal({ isOpen, onClose, trade }: TradeDetai
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div className="flex items-center space-x-2">
               <Package className="h-4 w-4 text-green-600" />
-              <span>{trade.quantity} {trade.unit}</span>
+              <span className='text-gray-800'>{trade.quantity} {trade.unit}</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="h-4 w-4 text-green-600" />
-              <span>{trade.location}</span>
+              <span className='text-gray-800'>{trade.location}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Calendar className="h-4 w-4 text-green-600" />
-              <span>{trade.postedDate}</span>
+              <span className='text-gray-800'>{trade.postedDate}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Badge variant={
@@ -77,7 +77,7 @@ export default function TradeDetailsModal({ isOpen, onClose, trade }: TradeDetai
               <AvatarFallback>{trade.postedBy.split(' ').map(n => n[0]).join('')}</AvatarFallback>
             </Avatar>
             <div>
-              <p className="text-sm font-medium">{trade.postedBy}</p>
+              <p className="text-sm text-gray-800 font-medium">{trade.postedBy}</p>
               <p className="text-xs text-gray-500">Trade Owner</p>
             </div>
           </div>
