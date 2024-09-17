@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Search, Filter, Plus, ArrowUpDown, Eye, Wheat, Tractor } from 'lucide-react'
+import { Search, Plus, ArrowUpDown, Eye, Wheat, Tractor } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
@@ -9,43 +9,56 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import TradeDetailsModal from './TradeDetailsModal'
 import NewTradeModal from '@/components/NewTradeModal'
+type Trade = {
+  id: number;
+  type: string;
+  product: string;
+  quantity: string;
+  unit: string;
+  location: string;
+  status: string;
+  description: string;
+  postedBy: string;
+  postedDate: string;
+};
 
 // Mock data for trades
-const mockTrades = [
+const mockTrades: Trade[] = [
   { id: 1, type: 'Offer', product: 'Corn', quantity: '500', unit: 'bushels', location: 'Iowa', status: 'Active', description: 'High-quality corn harvested this season. Ideal for animal feed or ethanol production.', postedBy: 'John Farmer', postedDate: '2023-06-15' },
   { id: 2, type: 'Request', product: 'Tractor', quantity: '1', unit: 'piece', location: 'Nebraska', status: 'Pending', description: 'Looking for a used mid-size tractor in good condition. Preferably John Deere or similar.', postedBy: 'Sarah Fields', postedDate: '2023-06-14' },
   { id: 3, type: 'Offer', product: 'Soybeans', quantity: '1000', unit: 'kg', location: 'Illinois', status: 'Active', description: 'Organic soybeans available for immediate purchase. Non-GMO certified.', postedBy: 'Mike Green', postedDate: '2023-06-13' },
   { id: 4, type: 'Request', product: 'Wheat', quantity: '200', unit: 'bushels', location: 'Kansas', status: 'Completed', description: 'Seeking high-protein wheat for artisanal bakery. Must meet organic standards.', postedBy: 'Emma Baker', postedDate: '2023-06-12' },
   { id: 5, type: 'Offer', product: 'Potatoes', quantity: '2000', unit: 'kg', location: 'Idaho', status: 'Active', description: 'Fresh Idaho potatoes, perfect for restaurants or food processing. Various sizes available.', postedBy: 'Tom Spud', postedDate: '2023-06-11' },
-]
+];
 
 export default function TradesPage() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [filterType, setFilterType] = useState('all')
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filterType, setFilterType] = useState('all');
   const [isNewTradeOpen, setIsNewTradeOpen] = useState(false)
-  const [sortCriteria, setSortCriteria] = useState<{ field: string; direction: 'asc' | 'desc' }>({ field: '', direction: 'asc' })
-  const [selectedTrade, setSelectedTrade] = useState<typeof mockTrades[0] | null>(null)
+  const [sortCriteria, setSortCriteria] = useState<{ field: keyof Trade; direction: 'asc' | 'desc' }>({ field: 'id', direction: 'asc' });
+  const [selectedTrade, setSelectedTrade] = useState<Trade | null>(null);
 
   const filteredTrades = mockTrades.filter(trade => 
     (trade.product.toLowerCase().includes(searchTerm.toLowerCase()) ||
      trade.location.toLowerCase().includes(searchTerm.toLowerCase())) &&
     (filterType === 'all' || trade.type.toLowerCase() === filterType)
-  )
+  );
 
   const sortedTrades = [...filteredTrades].sort((a, b) => {
     if (sortCriteria.field) {
-      if (a[sortCriteria.field] < b[sortCriteria.field]) return sortCriteria.direction === 'asc' ? -1 : 1
-      if (a[sortCriteria.field] > b[sortCriteria.field]) return sortCriteria.direction === 'asc' ? 1 : -1
+      const field = sortCriteria.field;
+      if (a[field] < b[field]) return sortCriteria.direction === 'asc' ? -1 : 1;
+      if (a[field] > b[field]) return sortCriteria.direction === 'asc' ? 1 : -1;
     }
-    return 0
-  })
+    return 0;
+  });
 
-  const handleSort = (field: string) => {
+  const handleSort = (field: keyof Trade) => {
     setSortCriteria(prev => ({
       field,
       direction: prev.field === field && prev.direction === 'asc' ? 'desc' : 'asc'
-    }))
-  }
+    }));
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-100 to-green-200 p-4 md:p-6">
@@ -80,15 +93,15 @@ export default function TradesPage() {
       </div>
 
       <div className="mb-4 flex justify-end space-x-2">
-        <Button variant="outline" size="sm" onClick={() => handleSort('type')}>
+        <Button variant="secondary" size="sm" onClick={() => handleSort('type')}>
           Sort by Type
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
-        <Button variant="outline" size="sm" onClick={() => handleSort('product')}>
+        <Button variant="secondary" size="sm" onClick={() => handleSort('product')}>
           Sort by Product
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
-        <Button variant="outline" size="sm" onClick={() => handleSort('location')}>
+        <Button variant="secondary" size="sm" onClick={() => handleSort('location')}>
           Sort by Location
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
