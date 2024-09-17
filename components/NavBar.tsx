@@ -9,7 +9,7 @@ function NavBar() {
         <LayoutDashboardIcon className="" />
         <span className=''>Dashboard</span>
       </Link>
-      <Link href={'/'} className="flex flex-col items-center text-xs gap-1 h-auto p-2">
+      <Link href={'/trades'} className="flex flex-col items-center text-xs gap-1 h-auto p-2">
         <Repeat className="" />
         <span>Trades</span>
       </Link>
