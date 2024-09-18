@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import Link from 'next/link'
 
 interface Trade {
   id: number
@@ -83,20 +84,20 @@ export default function TradeDetailsModal({ isOpen, onClose, trade }: TradeDetai
           </div>
         </div>
         <DialogFooter className="sm:justify-start space-x-2">
-          <Button className="bg-green-600 hover:bg-green-700 text-white">
+          <Button variant='outline' className="bg-white border border-green-500  text-green-500">
             <MessageSquare className="h-4 w-4 mr-2" />
             Message
           </Button>
           {trade.type === 'Offer' ? (
-            <Button variant="outline" className="border-green-600 text-green-700 hover:bg-green-100">
+            <Link href='./confirmation' className="border inline-flex items-center px-4 rounded bg-green-600 border-green-600 text-white hover:bg-green-100">
               <ThumbsUp className="h-4 w-4 mr-2" />
               Accept Offer
-            </Button>
+            </Link>
           ) : (
-            <Button variant="outline" className="border-green-600 text-green-700 hover:bg-green-100">
+            <Link href='./confirmation' className="border inline-flex items-center px-4 rounded bg-green-600 border-green-600 text-white hover:bg-green-100">
               <ThumbsUp className="h-4 w-4 mr-2" />
               Fulfill Request
-            </Button>
+            </Link>
           )}
         </DialogFooter>
       </DialogContent>

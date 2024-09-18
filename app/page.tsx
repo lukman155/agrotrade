@@ -78,10 +78,10 @@ export default function Dashboard() {
         isOpen={isNewTradeOpen} 
         onClose={() => setIsNewTradeOpen(false)} 
       />
-        <Button className="h-24 flex flex-col items-center justify-center bg-yellow-600 hover:bg-yellow-700">
+        <Link href={'/pricemap'} className="rounded-[7px] h-24 flex flex-col items-center justify-center bg-yellow-600 hover:bg-yellow-700">
           <Map className="h-8 w-8 mb-2" />
           <span>Price Map</span>
-        </Button>
+        </Link>
 
         <Button onClick={() => setIsSubmitPriceOpen(true)} className="h-24 flex flex-col items-center justify-center bg-purple-600 hover:bg-purple-700">
           <DollarSign className="h-8 w-8 mb-2" />
