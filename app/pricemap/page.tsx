@@ -177,7 +177,7 @@ export default function PriceMap() {
         </CardHeader>
         <CardContent>
           <p className="text-sm text-gray-600 mb-2">
-            Prices are in Nigerian Naira (₦) per 50kg bag for rice and cassava, and per tonne for cocoa.
+            Prices are in Nigerian Naira (₦) per tier for rice and cassava, and per kilogram for cocoa.
           </p>
           <p className="text-sm text-gray-600">
             These prices are estimates and may vary based on quality, quantity, and specific location within each state.

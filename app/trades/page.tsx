@@ -24,12 +24,13 @@ type Trade = {
 
 // Mock data for trades
 const mockTrades: Trade[] = [
-  { id: 1, type: 'Offer', product: 'Corn', quantity: '500', unit: 'bushels', location: 'Iowa', status: 'Active', description: 'High-quality corn harvested this season. Ideal for animal feed or ethanol production.', postedBy: 'John Farmer', postedDate: '2023-06-15' },
-  { id: 2, type: 'Request', product: 'Tractor', quantity: '1', unit: 'piece', location: 'Nebraska', status: 'Pending', description: 'Looking for a used mid-size tractor in good condition. Preferably John Deere or similar.', postedBy: 'Sarah Fields', postedDate: '2023-06-14' },
-  { id: 3, type: 'Offer', product: 'Soybeans', quantity: '1000', unit: 'kg', location: 'Illinois', status: 'Active', description: 'Organic soybeans available for immediate purchase. Non-GMO certified.', postedBy: 'Mike Green', postedDate: '2023-06-13' },
-  { id: 4, type: 'Request', product: 'Wheat', quantity: '200', unit: 'bushels', location: 'Kansas', status: 'Completed', description: 'Seeking high-protein wheat for artisanal bakery. Must meet organic standards.', postedBy: 'Emma Baker', postedDate: '2023-06-12' },
-  { id: 5, type: 'Offer', product: 'Potatoes', quantity: '2000', unit: 'kg', location: 'Idaho', status: 'Active', description: 'Fresh Idaho potatoes, perfect for restaurants or food processing. Various sizes available.', postedBy: 'Tom Spud', postedDate: '2023-06-11' },
+  { id: 1, type: 'Offer', product: 'Maize', quantity: '500', unit: 'bags', location: 'Kano', status: 'Active', description: 'High-quality maize harvested this season. Suitable for food processing or animal feed.', postedBy: 'Bala Abdullahi', postedDate: '2023-06-15' },
+  { id: 2, type: 'Request', product: 'Tractor', quantity: '1', unit: 'unit', location: 'Ogun', status: 'Pending', description: 'Looking for a used mid-size tractor in good condition. Preferably Massey Ferguson or similar.', postedBy: 'Funmi Adewale', postedDate: '2023-06-14' },
+  { id: 3, type: 'Offer', product: 'Soybeans', quantity: '1000', unit: 'kg', location: 'Benue', status: 'Active', description: 'Organic soybeans available for immediate purchase. Non-GMO certified.', postedBy: 'Michael Ocheme', postedDate: '2023-06-13' },
+  { id: 4, type: 'Request', product: 'Wheat', quantity: '200', unit: 'bags', location: 'Kaduna', status: 'Completed', description: 'Seeking high-protein wheat for bakery use. Must meet organic standards.', postedBy: 'Aisha Yusuf', postedDate: '2023-06-12' },
+  { id: 5, type: 'Offer', product: 'Yam', quantity: '2000', unit: 'tubers', location: 'Enugu', status: 'Active', description: 'Fresh yam tubers, perfect for food markets or bulk buyers. Various sizes available.', postedBy: 'Ikenna Okafor', postedDate: '2023-06-11' },
 ];
+
 
 export default function TradesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -92,18 +93,18 @@ export default function TradesPage() {
         </div>
       </div>
 
-      <div className="mb-4 flex justify-end space-x-2">
+      <div className="mb-4 flex flex-wrap justify-end space-x-2 gap-2">
         <Button variant="secondary" size="sm" onClick={() => handleSort('type')}>
           Sort by Type
-          <ArrowUpDown className="ml-2 h-4 w-4" />
+          <ArrowUpDown className=" h-4 w-4" />
         </Button>
         <Button variant="secondary" size="sm" onClick={() => handleSort('product')}>
           Sort by Product
-          <ArrowUpDown className="ml-2 h-4 w-4" />
+          <ArrowUpDown className=" h-4 w-4" />
         </Button>
         <Button variant="secondary" size="sm" onClick={() => handleSort('location')}>
           Sort by Location
-          <ArrowUpDown className="ml-2 h-4 w-4" />
+          <ArrowUpDown className=" h-4 w-4" />
         </Button>
       </div>
 

@@ -5,14 +5,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import Link from 'next/link'
 
 export default function ReputationProfile() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-100 to-green-200 p-4 md:p-6">
+    <div className="pb-10 min-h-screen bg-gradient-to-b from-green-100 to-green-200 p-4 md:p-6">
       <header className="flex items-center mb-6">
-        <Button variant="ghost" size="icon" className="mr-2">
+        <Link href={'/'} className="mr-4 p-3 bg-green-200 hover:bg-white rounded-full">
           <ArrowLeft className="h-6 w-6 text-green-700" />
-        </Button>
+        </Link>
         <h1 className="text-2xl font-bold text-green-800">Reputation & Profile</h1>
       </header>
 
@@ -65,10 +66,11 @@ export default function ReputationProfile() {
         <CardContent>
           <div className="space-y-4">
             {[
-              { partner: "Sarah", item: "10 kg tomatoes", date: "2023-06-15" },
-              { partner: "John", item: "Tractor rental", date: "2023-06-10" },
-              { partner: "Emma", item: "5 kg potatoes", date: "2023-06-05" },
-            ].map((trade, index) => (
+              { partner: "Funmi", item: "10 kg tomatoes", date: "2023-06-15" },
+              { partner: "Bala", item: "Tractor rental", date: "2023-06-10" },
+              { partner: "Aisha", item: "5 kg yam tubers", date: "2023-06-05" },
+            ]
+            .map((trade, index) => (
               <div key={index} className="flex items-center justify-between">
                 <div>
                   <p className="font-medium">{trade.partner}</p>
@@ -89,18 +91,18 @@ export default function ReputationProfile() {
           <div className="flex items-center mb-6">
             <Avatar className="h-20 w-20 mr-4">
               <AvatarImage src="/placeholder-avatar.jpg" alt="User" />
-              <AvatarFallback>JD</AvatarFallback>
+              <AvatarFallback>BA</AvatarFallback>
             </Avatar>
             <div>
-              <h2 className="text-xl font-bold">John Doe</h2>
-              <p className="text-sm text-muted-foreground">Corn & Soybean Farmer</p>
+              <h2 className="text-xl font-bold">Bala Ahmed</h2>
+              <p className="text-sm text-muted-foreground">Maize & Yam Farmer</p>
             </div>
           </div>
           {[
-            { label: "Location", value: "Midwest, USA" },
-            { label: "Member Since", value: "January 2022" },
-            { label: "Total Trades", value: "50" },
-            { label: "Preferred Crops", value: "Corn, Soybeans" },
+            { label: "Location", value: "Kaduna, Nigeria" },
+            { label: "Member Since", value: "March 2021" },
+            { label: "Total Trades", value: "35" },
+            { label: "Preferred Crops", value: "Maize, Yam" },
           ].map((item, index) => (
             <div key={index} className="flex justify-between items-center py-2 border-b last:border-b-0">
               <span className="text-sm text-muted-foreground">{item.label}</span>
@@ -108,9 +110,10 @@ export default function ReputationProfile() {
             </div>
           ))}
         </CardContent>
+
       </Card>
 
-      <Button variant="outline" className="w-full mt-6 flex justify-between items-center">
+      <Button variant="secondary" className="w-full mt-6 mb-16 flex justify-between items-center">
         <Settings className="h-5 w-5 mr-2" />
         <span>Account Settings</span>
         <ChevronRight className="h-5 w-5 ml-2" />

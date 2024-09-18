@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Star, MessageCircle, Phone, Check, ChevronLeft, ChevronRight } from 'lucide-react'
+import Link from 'next/link'
 
 // Mock data for the trade
 const tradeData = {
@@ -23,7 +24,6 @@ export default function TradeConfirmationFlow() {
   const [step, setStep] = useState(1)
   const [rating, setRating] = useState(0)
   const [feedback, setFeedback] = useState('')
-  const [, setTrustChange] = useState('neutral')
 
   const nextStep = () => setStep(step + 1)
   const prevStep = () => setStep(step - 1)
@@ -139,7 +139,7 @@ export default function TradeConfirmationFlow() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <Label htmlFor="rating">Rating (1-5 stars)</Label>
+                <Label htmlFor="rating">Trust Rating (1-5 stars)</Label>
                 <div className="flex space-x-1 mt-1">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Button
@@ -153,23 +153,7 @@ export default function TradeConfirmationFlow() {
                   ))}
                 </div>
               </div>
-              <div>
-                <Label htmlFor="trust">Trust Rating</Label>
-                <RadioGroup defaultValue="neutral" onValueChange={setTrustChange}>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="increase" id="increase" />
-                    <Label htmlFor="increase">Increase trust score</Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="neutral" id="neutral" />
-                    <Label htmlFor="neutral">Keep trust score the same</Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="decrease" id="decrease" />
-                    <Label htmlFor="decrease">Decrease trust score</Label>
-                  </div>
-                </RadioGroup>
-              </div>
+              
               <div>
                 <Label htmlFor="feedback">Comments (optional)</Label>
                 <Textarea
@@ -216,8 +200,8 @@ export default function TradeConfirmationFlow() {
               </p>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <Button variant="outline">Return to Dashboard</Button>
-              <Button className="bg-green-600 hover:bg-green-700">View Other Trades</Button>
+              <Link href={'/'} className='px-4 py-2 border hover:border-green-300 hover:text-green-700 rounded-[7px]' >Return to Dashboard</Link>
+              <Link href={'/trades'} className="px-4 py-2 rounded-[7px] text-white bg-green-600 hover:bg-green-700">View Other Trades</Link>
             </CardFooter>
           </Card>
         )

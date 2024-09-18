@@ -83,18 +83,18 @@ export default function TradeDetailsModal({ isOpen, onClose, trade }: TradeDetai
             </div>
           </div>
         </div>
-        <DialogFooter className="sm:justify-start space-x-2">
-          <Button variant='outline' className="bg-white border border-green-500  text-green-500">
+        <DialogFooter className="sm:justify-start gap-2">
+          <Button variant='outline' className="bg-white border border-green-500  text-green-400 hover:text-green-800 hover:border-green-800">
             <MessageSquare className="h-4 w-4 mr-2" />
             Message
           </Button>
           {trade.type === 'Offer' ? (
-            <Link href='./confirmation' className="border inline-flex items-center px-4 rounded bg-green-600 border-green-600 text-white hover:bg-green-100">
+            <Link href='./confirmation' className="border inline-flex items-center py-2 justify-center px-4 rounded bg-green-600 border-green-600 text-white hover:bg-green-700">
               <ThumbsUp className="h-4 w-4 mr-2" />
               Accept Offer
             </Link>
           ) : (
-            <Link href='./confirmation' className="border inline-flex items-center px-4 rounded bg-green-600 border-green-600 text-white hover:bg-green-100">
+            <Link href='./confirmation' className="border inline-flex items-center py-2 justify-center px-4 rounded bg-green-600 border-green-600 text-white hover:bg-green-700">
               <ThumbsUp className="h-4 w-4 mr-2" />
               Fulfill Request
             </Link>

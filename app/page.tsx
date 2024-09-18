@@ -50,15 +50,15 @@ export default function Dashboard() {
         <CardContent>
           <div className="flex items-center justify-between mb-2">
             <span>Corn</span>
-            <Badge variant="secondary">↑ $3.50/bushel</Badge>
+            <Badge variant="secondary">↑ ₦350/kg</Badge>
           </div>
           <div className="flex items-center justify-between mb-2">
             <span>Wheat</span>
-            <Badge variant="secondary">↓ $5.20/bushel</Badge>
+            <Badge variant="secondary">↓ ₦520/kg</Badge>
           </div>
           <div className="flex items-center justify-between">
             <span>Soybeans</span>
-            <Badge variant="secondary">→ $9.80/bushel</Badge>
+            <Badge variant="secondary">→ ₦500/kg</Badge>
           </div>
         </CardContent>
       </Card>
@@ -102,14 +102,14 @@ export default function Dashboard() {
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="font-medium">Trade with John</p>
-                <p className="text-sm text-muted-foreground">5 bushels of corn for 2 hours of tractor use</p>
+                <p className="font-medium">Trade with Emeka</p>
+                <p className="text-sm text-muted-foreground">50 kg of corn for 2 hours of tractor use</p>
               </div>
               <Badge>Pending</Badge>
             </div>
             <div className="flex items-center justify-between">
               <div>
-                <p className="font-medium">Trade with Sarah</p>
+                <p className="font-medium">Trade with Amina</p>
                 <p className="text-sm text-muted-foreground">10 kg of tomatoes for 5 kg of potatoes</p>
               </div>
               <Badge variant="secondary">In Progress</Badge>
