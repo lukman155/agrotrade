@@ -18,11 +18,10 @@ AgroTrade is a Web 3-powered platform designed to address the market access and 
 
 ## **Hackathon Submission Deliverables**
 
-- **Solution Link**: [GitHub Repository](#) (Include the link to your code repository here)
-- **Prototype Evidence**: Wireframes, solution blueprint, and demo video included below:
-  - **Wireframes**: [Link to Wireframes](#)
-  - **Solution Blueprint**: [Link to Blueprint](#)
-  - **Demo Video**: [Link to Demo](#)
+- **Solution Link**: [GitHub Repository](https://github.com/lukman155/agrotrade)
+
+  - **Live Solution**: [Link to Live Solution](https://agrotrade-mocha.vercel.app)
+  - **Demo Video**: [Link to Demo Video](#)
 
 ---
 
@@ -32,7 +31,7 @@ AgroTrade is a Web 3-powered platform designed to address the market access and 
 
 AgroTrade's code base is available in our GitHub repository. It includes:
 
-- **Frontend**: A responsive web interface built with HTML, CSS, JavaScript and React.
+- **Frontend**: A responsive web interface built with HTML, TailwindCSS, JavaScript and React.
 - **Backend**: Powered by Firebase, integrated with a blockchain-based transaction layer.
 - **Database**: Firebase for user data, trade history, and price submissions.
 - **Smart Contracts**: Implemented on Solana for secure, decentralized barter agreements.
@@ -52,8 +51,28 @@ AgroTrade's code base is available in our GitHub repository. It includes:
     ```
 
 3. Start the development server:
+
     ```bash
     npm run dev
     ```
 
 Visit <http://localhost:3000> to access the application.
+
+## Future Roadmap
+
+- **Government and NGO Partnerships:** Collaborate with entities that can leverage AgroTrade’s price data for policy-making and market intervention strategies.
+- **Expansion:** Scale AgroTrade to other regions in Africa, facilitating pan-African agricultural trade.
+- **Integration with Financial Services:** Introduce microcredit or loans based on reputation scores and trade volume.
+
+## Contributors
+
+- **Name: Abdulrahman Bin Umar(@binumarcodes)** Frontend Developer
+- **Name: Lukman Abdulkarim(@lukman155)** Fullstack Engineer
+- **Name: Muhammad Shehu(@Mshehu5)** Blockchain Specialist
+- **Name: Ziyad Shuaibu** Project Manager
+
+## Contact Information
+
+For any inquiries, reach out to us at:
+
+- **Email:** [lukmanabdulkarim@gmail.com]
