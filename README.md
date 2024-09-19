@@ -20,7 +20,7 @@ AgroTrade is a Web 3-powered platform designed to address the market access and 
 
 - **Solution Link**: [GitHub Repository](https://github.com/lukman155/agrotrade)
 
-- **Demo Video**: [Link to Demo Video](#)
+- **Demo Video**: [Link to Demo Video](https://youtu.be/82sGGH4F-rM)
 
 - **Live Solution**: [Link to Live Solution](https://agrotrade-mocha.vercel.app)
 
