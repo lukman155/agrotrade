@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **AgroTrade – Empowering Farmers through Barter and Web 3 Technology**
 
-## Getting Started
+## **Project Overview**
 
-First, run the development server:
+AgroTrade is a Web 3-powered platform designed to address the market access and pricing challenges faced by smallholder farmers in Nigeria. By leveraging blockchain technology, AgroTrade enables farmers to trade agricultural goods and services through a secure, transparent barter system, bypassing the need for cash and traditional credit systems. The platform also provides real-time price data, ensuring that farmers have access to fair and accurate information to guide their trade decisions.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Key Features**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Barter Trade System**: Facilitates cashless trade by enabling farmers to exchange produce and services without relying on financial institutions.
+- **Real-Time Price Data**: Incentivizes users to report location-based price data for agricultural products, ensuring transparency and fairness in the marketplace.
+- **Web 3 Security**: Powered by blockchain, AgroTrade ensures secure and transparent transactions, mitigating fraud and improving trust between trade participants.
+- **Cross-Border Trade**: Connects Nigerian farmers to international markets, enabling seamless cross-border exchanges.
+- **Reputation System**: Trust scores based on user ratings and feedback create a reliable and safe trading environment.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## **Hackathon Submission Deliverables**
 
-To learn more about Next.js, take a look at the following resources:
+- **Solution Link**: [GitHub Repository](#) (Include the link to your code repository here)
+- **Prototype Evidence**: Wireframes, solution blueprint, and demo video included below:
+  - **Wireframes**: [Link to Wireframes](#)
+  - **Solution Blueprint**: [Link to Blueprint](#)
+  - **Demo Video**: [Link to Demo](#)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## **Project Structure**
 
-## Deploy on Vercel
+### **1. Code Base**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+AgroTrade's code base is available in our GitHub repository. It includes:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Frontend**: A responsive web interface built with HTML, CSS, JavaScript and React.
+- **Backend**: Powered by Firebase, integrated with a blockchain-based transaction layer.
+- **Database**: Firebase for user data, trade history, and price submissions.
+- **Smart Contracts**: Implemented on Solana for secure, decentralized barter agreements.
+
+#### **How to Run the Code**
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/username/agrotrade.git
+   ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Start the development server:
+    ```bash
+    npm run dev
+    ```
+
+Visit <http://localhost:3000> to access the application.
