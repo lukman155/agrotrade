@@ -6,9 +6,12 @@ import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Link from 'next/link'
+import NavBar from "@/components/NavBar";
 
 export default function ReputationProfile() {
   return (
+    <>
+    <NavBar />
     <div className="pb-10 min-h-screen bg-gradient-to-b from-green-100 to-green-200 p-4 md:p-6">
       <header className="flex items-center mb-6">
         <Link href={'/'} className="mr-4 p-3 bg-green-200 hover:bg-white rounded-full">
@@ -119,5 +122,6 @@ export default function ReputationProfile() {
         <ChevronRight className="h-5 w-5 ml-2" />
       </Button>
     </div>
+    </>
   )
 }

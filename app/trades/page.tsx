@@ -9,6 +9,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import TradeDetailsModal from './TradeDetailsModal'
 import NewTradeModal from '@/components/NewTradeModal'
+import NavBar from "@/components/NavBar";
+
 type Trade = {
   id: number;
   type: string;
@@ -62,6 +64,8 @@ export default function TradesPage() {
   };
 
   return (
+    <>
+    <NavBar />
     <div className="min-h-screen bg-gradient-to-b from-green-100 to-green-200 p-4 md:p-6">
       <h1 className="text-3xl font-bold text-green-800 mb-6">Trades</h1>
       
@@ -161,5 +165,6 @@ export default function TradesPage() {
         trade={selectedTrade}
       />
     </div>
+    </>
   )
 }

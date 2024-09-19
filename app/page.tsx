@@ -1,25 +1,37 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Bell, Search, PlusCircle, Map, DollarSign, } from 'lucide-react'
+import { Bell, Search, PlusCircle, Map, DollarSign, LogOut, } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import NewTradeModal from '@/components/NewTradeModal'
 import SubmitPriceModal from '@/components/SubmitPriceModal'
 import Link from 'next/link'
+import ProtectedRoute from '@/components/ProtectedRoute'
+import { signOut } from 'firebase/auth'
+import { auth } from './firebaseConfig'
+import NavBar from "@/components/NavBar";
 
 export default function Dashboard() {
   const [isNewTradeOpen, setIsNewTradeOpen] = useState(false);
   const [isSubmitPriceOpen, setIsSubmitPriceOpen] = useState(false)
 
   return (
+    <ProtectedRoute>
+      <NavBar />
     <div className="min-h-screen bg-gradient-to-b from-green-100 to-green-200 p-4 md:p-6">
       <header className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-green-800">AgroTrade</h1>
+        <div className="flex gap-4">
         <Button variant="ghost" size="icon">
           <Bell className="h-6 w-6 text-green-700" />
         </Button>
+        <Button onClick={()=>{signOut(auth)}} variant="ghost" size="icon">
+          <LogOut className="h-6 w-6 text-green-700" />
+        </Button>
+        </div>
+        
       </header>
 
       <Card className="mb-6">
@@ -118,5 +130,6 @@ export default function Dashboard() {
         </CardContent>
       </Card>
     </div>
+    </ProtectedRoute>
   )
 }

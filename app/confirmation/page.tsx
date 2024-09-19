@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Star, MessageCircle, Phone, Check, ChevronLeft, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
+import NavBar from "@/components/NavBar";
 
 // Mock data for the trade
 const tradeData = {
@@ -211,6 +212,8 @@ export default function TradeConfirmationFlow() {
   }
 
   return (
+    <>
+    <NavBar />
     <div className=" min-h-screen bg-gradient-to-b from-green-100 to-green-200 p-4 md:p-6 pb-24 flex flex-col items-center justify-center">
       <div className="w-full max-w-md mb-8">
         <div className="flex justify-between items-center mb-4">
@@ -243,5 +246,6 @@ export default function TradeConfirmationFlow() {
       </div>
       {renderStep()}
     </div>
+    </>
   )
 }

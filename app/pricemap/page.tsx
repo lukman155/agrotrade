@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Wheat, Coffee, Leaf } from 'lucide-react'
 import ngGeoJson from './ng.json'
+import NavBar from "@/components/NavBar";
 
 type PriceDataEntry = { state: string; price: number; coordinates: [number, number] };
 
@@ -65,6 +66,8 @@ export default function PriceMap() {
     .range(colorScale)
 
   return (
+    <>
+    <NavBar />
     <div className="min-h-screen bg-gradient-to-b from-green-100 to-green-200 p-4 md:p-6">
       <h1 className="text-3xl font-bold text-green-800 mb-6">Nigeria Price Map</h1>
       
@@ -185,5 +188,6 @@ export default function PriceMap() {
         </CardContent>
       </Card>
     </div>
+    </>
   )
 }
