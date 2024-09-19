@@ -20,8 +20,17 @@ AgroTrade is a Web 3-powered platform designed to address the market access and 
 
 - **Solution Link**: [GitHub Repository](https://github.com/lukman155/agrotrade)
 
-  - **Live Solution**: [Link to Live Solution](https://agrotrade-mocha.vercel.app)
-  - **Demo Video**: [Link to Demo Video](#)
+- **Demo Video**: [Link to Demo Video](#)
+
+- **Live Solution**: [Link to Live Solution](https://agrotrade-mocha.vercel.app)
+
+  - You can register with any email address and password with 6 characters or more.
+  - You can also login with the Test account login details below.
+
+   ```bash
+    email: a@a.com
+    password: asd123
+    ```
 
 ---
 
