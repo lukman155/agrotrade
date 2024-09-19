@@ -56,6 +56,13 @@ AgroTrade's code base is available in our GitHub repository. It includes:
     npm run dev
     ```
 
+4. Register/Login using any email address or the test account below:
+
+    ```bash
+    email: a@a.com
+    password: asd123
+    ```
+
 Visit <http://localhost:3000> to access the application.
 
 ## Future Roadmap
